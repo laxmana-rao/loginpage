@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form action="dashboard.html" method="POST">
+        <form id="loginForm" action="dashboard.html" method="POST" onsubmit="return handleLogin(event)">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -19,8 +19,11 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit">Login</button>
+            <div id="loader" class="loader" style="display: none;"></div>
         </form>
         <p class="message">Not registered? <a href="#">Create an account</a></p>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
